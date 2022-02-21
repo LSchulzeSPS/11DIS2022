@@ -67,8 +67,3 @@
 #         n = n + int(characters)
 # print(n)
 
-
-
-
-
-
