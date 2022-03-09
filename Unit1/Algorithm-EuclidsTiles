@@ -29,20 +29,10 @@ For count in range (0, acrossSquares):
     Move Pen(startX += size)
 startY += size
 
-
-
-
-
 euclidAlgorithm:
-
 Declare holdValue = 1
-
 While holdValue != 0:
-
-holdValue = length % width
-
-length = width
-
-width = holdValue
-
+    holdValue = length % width
+    length = width
+    width = holdValue
 Return length
