@@ -1,0 +1,125 @@
+Algorithm (My understanding):
+
+Find GCD (greatest common denominator) of 2 numbers
+
+Fill box of 2 numbers size with boxes of GCD = squares
+
+
+
+Algorithm (Pseudocode Hardcode):
+
+Euclid's Tiles:
+
+DECLARE num1
+DECLARE num2
+DECLARE num3
+
+num1 = 150
+
+num2 = 345
+
+num3 = 1
+
+storeNum = 1
+
+t.screensize = num1, num2
+
+WHILE num3 != 0
+
+num1 = num3 % num2
+
+num3 = num2
+
+num2 = num1
+
+storeNum = storeNum + 1
+
+FOR i in range(storeNum):
+
+DISPLAY square
+
+MOVE right
+
+
+
+High level pseudocode
+
+Draw canvas size 345 x 150 long – floorWidth, floorLength
+
+Calculate square size, use euclids algorithm – Function, calculateTile
+
+Calculate how many squares fit across the canvas – numberOfTilesX
+
+Calculate how many squares fit down the canvas – numberOfTilesY
+
+Draw squares across – while tilesX < numberOfTilesX
+
+A) Find starting x
+
+B) Find starting y
+
+C) Draw square
+
+D) Colour square
+
+E) Move across x axis width of square
+
+Move down y axis width of square – while tilesY < numberOfTilesY
+
+
+
+
+
+
+
+Low level pseudocode:
+
+Declare length = 345
+
+Declare width = 150
+
+Declare downSquare
+
+Declare acrossSquare
+
+Declare startX = 0
+
+Declare startY = 0
+
+Draw Canvas (length x width)
+
+size = Call euclidAlgorithm(length, width)
+
+acrossSquares = length / size
+
+downSquares = width / size
+
+For count in range (0, downSquares):
+
+Pen Start (startX, startY)
+
+For count in range (0, acrossSquares):
+
+Display square (size)
+
+Move Pen(startX += size)
+
+startY += size
+
+
+
+
+
+euclidAlgorithm:
+
+Declare holdValue = 1
+
+While holdValue != 0:
+
+holdValue = length % width
+
+length = width
+
+width = holdValue
+
+Return length
