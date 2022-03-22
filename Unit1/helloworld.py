@@ -67,3 +67,34 @@
 #         n = n + int(characters)
 # print(n)
 
+# def add_dots(string):
+#     complete = ""
+#     for count, letter in enumerate(string):
+#         if count+1 == len(string): complete = complete + letter
+#         else: complete = complete + letter + "."
+#     return complete
+# def add_dots(string):
+#     print(".".join(string))
+# def remove_dots(string):
+#     return string.replace('.', '')
+# print(".".join("test"))
+
+# def is_anagram(str1,str2):
+#     if len(str1) != len(str2): return False
+#     for letter in str1:
+#         for check in str2:
+#             if letter == check:
+#                 str2 = str2.replace(check, '', 1)
+#                 break
+#     if str2 == "": return True
+#     else: return False
+# print(is_anagram("abc", "cac"))
+
+def flatten(l1):
+    l2 = []
+    for a in range(len(l1)):
+        for b in l1[a]:
+            l2.append(b)
+    return l2
+print(flatten([[1,2],[3,4]]))
+
