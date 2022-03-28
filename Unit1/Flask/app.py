@@ -8,8 +8,7 @@ def index(name):
         return "Welcome " + name
     else:
         return "Welcome everyone"
-    message = ("Website be made")
-
+    message = "Nice"
     #return message
     return render_template('index.html', data=message)
 if __name__ == '__main__':
