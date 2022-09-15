@@ -3,4 +3,4 @@ import os
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or "Secret_String"
 
-    MONGODB_SETTINGS = { 'db' : 'SPS_Enrolment'}
+    # MONGODB_SETTINGS = { 'db' : 'SPS_Enrolment'}

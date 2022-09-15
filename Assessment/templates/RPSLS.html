@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+        <h1>Rock Paper Scissors Lizard Spock</h1>
+        <form method="post" action="{{ url_for('gameover') }}">
+            <div class="dropdown">
+                <h4>Rules(Hover to read)</h4>
+                <div class="drop-content">
+                    Rules are similar to Rock Paper Scissors but with the slight
+                    twist of two added choice being Lizard or Spock.<br>
+                    Rock beats Scissors and Lizard<br>
+                    Paper beats Rock and Spock<br>
+                    Scissors beats Lizard and Paper<br>
+                    Lizard beats Paper and Spock<br>
+                    Spock beats Rock and Scissors<br>
+                    Press any button below to continue
+                </div>
+            </div>
+            <fieldset class="inline">
+                <button type="submit" name="rock" value="rock" class="centering"><img src="/static/images/rock.png"></button>
+                <button type="submit" name="paper" value="paper" class="centering"><img src="/static/images/paper.png"></button>
+                <button type="submit" name="scissors" value="scissors" class="centering"><img src="/static/images/scissors.png"></button>
+                <button type="submit" name="lizard" value="lizard" class="centering"><img src="/static/images/lizard.png"></button>
+                <button type="submit" name="spock" value="spock" class="centering"><img src="/static/images/spock.png"></button>
+            </fieldset>
+        </form>
+        {% if success == True %}
+        <h4>{{ 'You {} the opponent by playing {} when they played {}'.format(result, player, opponent) }}</h4>
+        {% endif %}
+{% endblock %}

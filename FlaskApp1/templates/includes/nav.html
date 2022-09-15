@@ -4,7 +4,11 @@
             <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link {% if index %} active {% endif %}">Home</a></li>
             <li class="nav-item"><a href="{{ url_for('courses') }}" class="nav-link {% if courses %} active {% endif %}">Courses</a></li>
             <li class="nav-item"><a href="{{ url_for('register') }}" class="nav-link {% if register %} active {% endif %}">Register</a></li>
+            <li class="nav-item"><a href="{{ url_for('enrolment') }}" class="nav-link {% if enrolment %} active {% endif %}">Enrolment</a></li>
             <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %} active {% endif %}">Login</a></li>
+            <li class="nav-item"><a href="{{ url_for('calculator') }}" class="nav-link {% if calculator %} active {% endif %}">Calculator</a></li>
+            <li class="nav-item"><a href="{{ url_for('calculatordf') }}" class="nav-link {% if calculatordf %} active {% endif %}">Calculatordf</a></li>
+            <li class="nav-item"><a href="{{ url_for('letterCount') }}" class="nav-link {% if letterCount %} active {% endif %}">Letter Count</a></li>
         </ul>
     </nav>
     <hr style="clear:both">

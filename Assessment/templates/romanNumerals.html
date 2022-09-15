@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>Roman Numeral Converter</h1>
+            <form method="post" action="{{ url_for('complete') }}">
+                <p>
+                    {{form.number}}
+                </p>
+            </form>
+            <button type="submit" name="convert" value="convert">Convert</button>
+        </div>
+    </div>
+{% endblock %}

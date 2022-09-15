@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form name="calculator" action="" method="post">
+                <fieldset class="form-group">
+                    <legend>{{title}}</legend>
+                    {{ form.hidden_tag() }}
+                    <p>
+                        {{form.num1.label}}<br>
+                        {{form.num1}}
+                        {% for error in form.num1.error %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{form.num2.label}}<br>
+                        {{form.num2}}
+                        {% for error in form.num2.error %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        <button type="submit" name="add" value="add">+</button>
+                        <button type="submit" name="min" value="min">-</button>
+                        <button type="submit" name="mul" value="mul">*</button>
+                        <button type="submit" name="div" value="div">/</button>
+                        <button type="submit" name="mod" value="mod">%</button>
+                    </p>
+                </fieldset>
+            </form>
+            {% if calculation_success == True %}
+            <h5>{{ '{} {} {} = {}'.format(num1, operation, num2, result) }}</h5>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

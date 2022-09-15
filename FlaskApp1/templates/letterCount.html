@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form name="letterCountForm" action="" method="post">
+                <h3>{{title}}</h3>
+                <h5>Word: {{form.word()}}</h5>
+                {{form.submit}}
+            </form>
+            <h5>{{tl}}</h5><br>
+            <h5>{{tul}}</h5><br>
+            {% for key, val in my_dict.items() %}
+            <h5>{{ 'Letter: {}, Count: {}'.format(key, val) }}</h5>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
